@@ -7,14 +7,15 @@ def input_page(request):
 
 def display_page(request):
 
-    messages = {
-        'messages': request.POST.get("message")
-    }
-    return render(request, 'display_messages_page.html', messages)
+    message = {'messages': request.POST.get("message")}
+    request.session['messages'] = message
+    return render(request, 'display_messages_page.html', message)
 
 
 def session_page(request):
-    return HttpResponse("session")
+    messages = request.session.get("messages")
+    return render(request, 'display_messages_page.html', messages)
+
 
 def members_page(request):
     return render(request, 'members.html')
