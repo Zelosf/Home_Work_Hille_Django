@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Display Messages</title>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        height: 100vh;
+        }
+    </style>
 </head>
 <body>
     {% if messages %}
-        <p>Messages.</p>
+        <p>{{ messages }}</p>
     {% else %}
         <p>No Messages</p>
     {% endif %}
