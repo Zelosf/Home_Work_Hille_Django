@@ -3,10 +3,15 @@ from django.shortcuts import render
 
 
 def input_page(request):
-    return HttpResponse("INPUT")
+    return render(request, "input_messages_page.html")
 
 def display_page(request):
-    return HttpResponse("Display")
+
+    messages = {
+        'messages': request.POST.get("message")
+    }
+    return render(request, 'display_messages_page.html', messages)
+
 
 def session_page(request):
     return HttpResponse("session")

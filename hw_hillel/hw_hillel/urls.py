@@ -23,7 +23,7 @@ from home import views as home_views
 members_patterns = [
     path('', members_views.members_page, name='members'),
     path('input/', members_views.input_page, name='input_page'),
-    path('display/', members_views.display_page, name='display_page'),
+    path('input/display/', members_views.display_page, name='display_page'),
     path('session/', members_views.session_page, name='session_page')
 ]
 
