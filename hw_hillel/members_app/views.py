@@ -17,5 +17,6 @@ def session_page(request):
     return render(request, 'display_messages_page.html', messages)
 
 
+
 def members_page(request):
     return render(request, 'members.html')
