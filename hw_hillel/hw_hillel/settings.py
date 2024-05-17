@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'members_app',
     'courses_app',
+    'members_with_db_app'
 ]
 
 MIDDLEWARE = [
@@ -108,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
